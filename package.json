@@ -1,0 +1,57 @@
+{
+  "name": "writable-stream-and-promise",
+  "version": "1.0.0",
+  "description": "Pipe a stream into a Promise.",
+  "keywords": [
+    "stream",
+    "promise",
+    "writable"
+  ],
+  "main": "index.js",
+  "scripts": {
+    "clean": "rimraf coverage",
+    "test": "eslint --ignore-path=.gitignore . && cross-env NODE_ENV=test nyc --reporter=lcov --reporter=text mocha test.js"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/raymond-lam/writable-stream-and-promise.git"
+  },
+  "author": "Raymond Lam",
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/raymond-lam/writable-stream-and-promise/issues"
+  },
+  "homepage": "https://github.com/raymond-lam/writable-stream-and-promise#readme",
+  "devDependencies": {
+    "babel-plugin-istanbul": "^5.1.1",
+    "babel-register": "^6.26.0",
+    "chai": "^4.2.0",
+    "cross-env": "^5.2.0",
+    "eslint": "^5.14.1",
+    "mocha": "^5.2.0",
+    "nyc": "^13.3.0",
+    "rimraf": "^2.6.3"
+  },
+  "nyc": {
+    "require": [
+      "babel-register"
+    ],
+    "sourceMap": false,
+    "instrument": false,
+    "lines": 100,
+    "statements": 100,
+    "functions": 100,
+    "branches": 100,
+    "check-coverage": true,
+    "temp-dir": "./coverage/.nyc_output"
+  },
+  "babel": {
+    "env": {
+      "test": {
+        "plugins": [
+          "istanbul"
+        ]
+      }
+    }
+  }
+}
