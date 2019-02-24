@@ -29,7 +29,7 @@ Returns a 2-tuple (Array): a [Writable](https://nodejs.org/api/stream.html#strea
   - `highWaterMark` Writes are completed immediately and synchronously, so this parameter is only really relevant if the stream is [cork](https://nodejs.org/api/stream.html#stream_writable_cork)ed. `highWaterMark` indicates the number of bytes that the stream should buffer while corked. The default is 16384 (16 kb). 
 - Returns: A 2-tuple (Array of length 2), the first element a [Writable](https://nodejs.org/api/stream.html#stream_writable_streams) stream, and the second element a Promise.
 
-### writableObjectStreamAndPromise([options])
+#### writableObjectStreamAndPromise([options])
 
 Returns a 2-tuple (Array): a [Writable](https://nodejs.org/api/stream.html#stream_writable_streams) [object stream](https://nodejs.org/api/stream.html#stream_object_mode) and a Promise. When the stream ends, the Promise resolves to an Array containing all the chunks written to the stream. The Promise rejects if the stream emits an error or when the stream is destroyed. The stream does not destroy itself automatically after ending. The stream will emit a `'close'` event when it is destroyed.
 
