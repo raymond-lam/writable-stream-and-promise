@@ -2,8 +2,6 @@
 
 # writable-stream-and-promise
 
-[![Greenkeeper badge](https://badges.greenkeeper.io/raymond-lam/writable-stream-and-promise.svg)](https://greenkeeper.io/)
-
 Pipe a [stream](https://nodejs.org/api/stream.htm) into a Promise.
 
 ## Usage
