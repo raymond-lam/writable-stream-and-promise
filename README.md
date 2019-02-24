@@ -1,3 +1,5 @@
+[![Build Status](https://travis-ci.com/raymond-lam/writable-stream-and-promise.svg?branch=master)](https://travis-ci.com/raymond-lam/writable-stream-and-promise) [![Greenkeeper badge](https://badges.greenkeeper.io/raymond-lam/writable-stream-and-promise.svg)](https://greenkeeper.io/)
+
 # writable-stream-and-promise
 
 [![Greenkeeper badge](https://badges.greenkeeper.io/raymond-lam/writable-stream-and-promise.svg)](https://greenkeeper.io/)

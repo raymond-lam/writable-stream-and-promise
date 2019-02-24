@@ -1,6 +1,8 @@
 language: node_js
 node_js: node
 install: npm install
+before_script: greenkeeper-lockfile-update
+after_script: greenkeeper-lockfile-upload
 deploy:
   provider: npm
   email: ray@lam-ray.com
@@ -9,3 +11,6 @@ deploy:
   on:
     tags: true
     repo: raymond-lam/writable-stream-and-promise
+env:
+  global:
+    secure: NIVXWkBpnHvKc5MKjVlGnEbjB3RAwHgQGJuUnxv1SePhMq/L4Friiry+Jxk3g6cpxxu0djuGLDaNcKIPACGxbSQw5jbykPO2YZmbLUGGc8KY9Uw+r7fK+clm2IDVnryQrir2KE+YJOvqRJ0KPuslCeQASC+GqByAZaI3Ba6wyio8eqz3TV0lxxFHLXKNDpCFDk8cvDEOtsYMgk5L9c/eysuOsJ4MX37ZN3crNX0OYTEo77drkdfXdzJVJ5UXArQC/C7ok9p5FvNbi55ZkLVklzQJY8J3eTJ6BIq2Q3rKzd7gLgsuFYdJivGzTdvJXqfKdi/8KsiJUgacNf5SmC1G2pid1vHfq8xALpejN594eMxQnux7+htRGf2Ow4UK4nVMocqYBJ3CA8SOANZsI6G+bBQ15hUXiM75c3neOhJriAsej20s/Ub4htaKVlCPb5ozlIoj/VmhWeeJFezo3/NXpVpuYOkZam7GrQfvVBWo0aqvHkqQKUNWOn5mjnAIA1InCRyV2zCYYgSGESfcHAnKnuGiqQwaxYEPWdiBS/RXrfEBZrzu2EmGVZlUj+JV8HLOwgJuHtemUDI8iv8CAmlKF2UD6a30W+enAUvYrtT17SD77AtsHCUwYWTwd90VrOTjs6zLzsaLHOHCnXnHGslLHnDTN23FcBk9Hk/zduef2EQ=
