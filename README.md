@@ -13,10 +13,14 @@ const {createReadStream} = require('fs');
 const {writableStreamAndPromise} = require('writable-stream-and-promise');
 const {createGunzip} = require('zlib');
 
-const readGzippedFile = async path => {
+const processZipFile = async path => {
   const [writable, promise] = writableStreamAndPromise();
-  createReadStream('sample-file.gz').pipe(createGunzip()).pipe(writable);
-  return await promise;
+  createReadStream(path).pipe(createGunzip()).pipe(writable);
+  const contents = await promise;
+
+  // ... process contents ...
+
+  return processedContents;
 };
 ```
 
