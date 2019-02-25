@@ -1,6 +1,6 @@
 {
   "name": "writable-stream-and-promise",
-  "version": "1.0.0",
+  "version": "1.0.1",
   "description": "Pipe a stream into a Promise.",
   "keywords": [
     "stream",
@@ -30,7 +30,6 @@
     "eslint": "^5.14.1",
     "mocha": "^6.0.2",
     "greenkeeper-lockfile": "^1.15.1",
-    "mocha": "^6.0.2",
     "nyc": "^13.3.0",
     "rimraf": "^2.6.3"
   },
