@@ -1,5 +1,21 @@
 # Changelog
 
+## [1.0.2] - 2019-05-05
+
+### Fixed
+
+- Removed unnecessary dev dependencies to fix failing coverage script
+
+### Changed
+
+- Updated dev dependencies
+- minor change README.md format
+
+### Added
+
+- coveralls.io integration
+- additional badges in README.md
+
 ## [1.0.1] - 2019-02-25
 
 ### Fixed
