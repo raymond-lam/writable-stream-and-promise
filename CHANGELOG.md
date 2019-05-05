@@ -1,5 +1,11 @@
 # Changelog
 
+## [1.0.3] - 2019-05-05
+
+### Fixed
+
+- Fixed coveralls repo token
+
 ## [1.0.2] - 2019-05-05
 
 ### Fixed
