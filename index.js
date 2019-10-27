@@ -51,7 +51,7 @@ const getBaseClassAndProtectedMembers = () => {
         callback(err);
         internalEvents.emit(
           'destroy',
-          err || new Error('Stream was destroyed.')
+          err || new Error('Stream was destroyed.'),
         );
       }
 
@@ -120,7 +120,7 @@ module.exports = {
         if (totalLength > MAX_LENGTH) {
           throw new Error(
             `Total length of buffered data (${totalLength} bytes) exceeds `
-              + `maximum allowed length of Buffer (${MAX_LENGTH} bytes).`
+              + `maximum allowed length of Buffer (${MAX_LENGTH} bytes).`,
           );
         }
 
@@ -144,7 +144,7 @@ module.exports = {
         /* istanbul ignore next */if (offset !== totalLength) {
           throw new Error(
             'length property of chunks do not sum to the length of the Buffer '
-              + 'allocated for them.'
+              + 'allocated for them.',
           );
         }
 
@@ -158,7 +158,7 @@ module.exports = {
         internalEvents
           .once('destroy', reject)
           .once('collect', resolve);
-      }
+      },
     )];
   },
 
@@ -215,7 +215,7 @@ module.exports = {
         internalEvents
           .once('destroy', reject)
           .once('collect', resolve);
-      }
+      },
     )];
   },
 };

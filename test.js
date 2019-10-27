@@ -30,7 +30,7 @@ describe('writableStreamAndPromise', () => {
       // eslint-disable-next-line no-unused-expressions
       expect(Buffer.isBuffer(buffer)).to.be.true;
       expect(Array.from(buffer.values())).to.deep.equal([1, 2, 3, 6, 5, 4]);
-    }
+    },
   );
 
   it(
@@ -47,7 +47,7 @@ describe('writableStreamAndPromise', () => {
       // eslint-disable-next-line no-unused-expressions
       expect(Buffer.isBuffer(buffer)).to.be.true;
       expect(buffer.toString()).to.equal('abcx y z');
-    }
+    },
   );
 
   it(
@@ -66,7 +66,7 @@ describe('writableStreamAndPromise', () => {
       // eslint-disable-next-line no-unused-expressions
       expect(Buffer.isBuffer(buffer)).to.be.true;
       expect(buffer.toString('ucs-2')).to.equal('abcx y z');
-    }
+    },
   );
 
   it(
@@ -92,7 +92,7 @@ describe('writableStreamAndPromise', () => {
         ...Array.from(Buffer.from('x y z', 'ucs-2')),
         ...Array.from(Buffer.from('bbb', 'hex')),
       ]);
-    }
+    },
   );
 
   it(
@@ -106,7 +106,7 @@ describe('writableStreamAndPromise', () => {
 
         promise.then(buffer => {
           expect(
-            Array.from(buffer.values())
+            Array.from(buffer.values()),
           ).to.deep.equal([
             1, 2, 3,
             1, 2, 3,
@@ -142,8 +142,8 @@ describe('writableStreamAndPromise', () => {
         });
 
         writable.uncork();
-      }
-    )
+      },
+    ),
   );
 
   it(
@@ -154,7 +154,7 @@ describe('writableStreamAndPromise', () => {
       const [writable, promise] = writableStreamAndPromise();
 
       const closePromise = new Promise(
-        resolve => writable.once('close', resolve)
+        resolve => writable.once('close', resolve),
       );
 
       writable.write('abc');
@@ -165,7 +165,7 @@ describe('writableStreamAndPromise', () => {
       // bytes, which would throw an error if called after destruction, since
       // the pointer to the collected bytes is set to null.
       expect(() => writable._collect(() => {})).to.throw(
-        "Cannot read property 'next' of null"
+        "Cannot read property 'next' of null",
       );
 
       let error;
@@ -178,7 +178,7 @@ describe('writableStreamAndPromise', () => {
 
       expect(error).to.be.an.instanceof(Error);
       expect(error.message).to.equal('Stream was destroyed.');
-    }
+    },
   );
 
   it(
@@ -201,7 +201,7 @@ describe('writableStreamAndPromise', () => {
       }
 
       expect(promiseError).to.equal(destroyError);
-    }
+    },
   );
 
   it(
@@ -225,9 +225,9 @@ describe('writableStreamAndPromise', () => {
       expect(error).to.be.an.instanceof(Error);
       expect(error.message).to.equal(
         `Total length of buffered data (${MAX_LENGTH + 1} bytes) exceeds `
-          + `maximum allowed length of Buffer (${MAX_LENGTH} bytes).`
+          + `maximum allowed length of Buffer (${MAX_LENGTH} bytes).`,
       );
-    }
+    },
   );
 });
 
@@ -262,7 +262,7 @@ describe('writableObjectStreamAndPromise', () => {
         {foo: 'bar'},
         [1, 'a', {biz: 'baz'}],
       ]);
-    }
+    },
   );
 
   it(
@@ -303,8 +303,8 @@ describe('writableObjectStreamAndPromise', () => {
         });
 
         writable.uncork();
-      }
-    )
+      },
+    ),
   );
 
   it(
@@ -315,7 +315,7 @@ describe('writableObjectStreamAndPromise', () => {
       const [writable, promise] = writableObjectStreamAndPromise();
 
       const closePromise = new Promise(
-        resolve => writable.once('close', resolve)
+        resolve => writable.once('close', resolve),
       );
 
       writable.write('abc');
@@ -327,7 +327,7 @@ describe('writableObjectStreamAndPromise', () => {
       // bytes, which would throw an error if called after destruction, since
       // the pointer to the collected bytes is set to null.
       expect(() => writable._collect(() => {})).to.throw(
-        "Cannot read property 'next' of null"
+        "Cannot read property 'next' of null",
       );
 
       let error;
@@ -340,7 +340,7 @@ describe('writableObjectStreamAndPromise', () => {
 
       expect(error).to.be.an.instanceof(Error);
       expect(error.message).to.equal('Stream was destroyed.');
-    }
+    },
   );
 
   it(
@@ -363,6 +363,6 @@ describe('writableObjectStreamAndPromise', () => {
       }
 
       expect(promiseError).to.equal(destroyError);
-    }
+    },
   );
 });
