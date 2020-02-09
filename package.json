@@ -1,6 +1,6 @@
 {
   "name": "writable-stream-and-promise",
-  "version": "1.0.7",
+  "version": "1.0.8",
   "description": "Pipe a stream into a Promise.",
   "keywords": [
     "stream",

@@ -1,5 +1,15 @@
 # Changelog
 
+## [1.0.8] - 2020-02-09
+
+### Changed
+
+- Updated dev dependencies
+
+### Fixed
+
+- Fixed deployment
+
 ## [1.0.7] - 2019-12-29
 
 ### Changed
