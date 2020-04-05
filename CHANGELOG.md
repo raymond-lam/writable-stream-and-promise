@@ -1,5 +1,11 @@
 # Changelog
 
+## [1.0.10] - 2020-04-05
+
+### Fixed
+
+- Updated dev dependency to address security vulnerability
+
 ## [1.0.9] - 2020-03-14
 
 ### Fixed
