@@ -30,6 +30,9 @@ const getBaseClassAndProtectedMembers = () => {
   // to the head.
   let tail = {};
 
+  // true if _final was called, and false otherwise.
+  let end = false;
+
   return [
     class extends Writable {
       // eslint-disable-next-line class-methods-use-this
@@ -48,19 +51,16 @@ const getBaseClassAndProtectedMembers = () => {
         // for this to be effective.
         tail = null;
 
-        callback(err);
-        internalEvents.emit(
-          'destroy',
-          err || new Error('Stream was destroyed.'),
-        );
+        if (!err && !end) {
+          callback(new Error('Stream was destroyed.'));
+        }
+        else {
+          callback(err);
+        }
       }
 
       _final(callback) {
-        // _collect needs to let go of the head of the linked list to free the
-        // memory.
-        tail = null;
         let contents;
-
         try {
           contents = this._collect();
         }
@@ -69,6 +69,7 @@ const getBaseClassAndProtectedMembers = () => {
           return;
         }
 
+        end = true;
         callback();
         internalEvents.emit('collect', contents);
       }
@@ -155,9 +156,7 @@ module.exports = {
     return [writable, new Promise(
       (resolve, reject) => {
         writable.once('error', reject);
-        internalEvents
-          .once('destroy', reject)
-          .once('collect', resolve);
+        internalEvents.once('collect', resolve);
       },
     )];
   },
@@ -212,9 +211,7 @@ module.exports = {
     return [writable, new Promise(
       (resolve, reject) => {
         writable.once('error', reject);
-        internalEvents
-          .once('destroy', reject)
-          .once('collect', resolve);
+        internalEvents.once('collect', resolve);
       },
     )];
   },
