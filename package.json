@@ -24,12 +24,12 @@
   "homepage": "https://github.com/raymond-lam/writable-stream-and-promise#readme",
   "devDependencies": {
     "chai": "^4.2.0",
-    "coveralls": "^3.0.3",
-    "eslint": "^6.6.0",
+    "coveralls": "^3.1.0",
+    "eslint": "^7.4.0",
     "greenkeeper-lockfile": "^1.15.1",
-    "mocha": "^7.1.1",
-    "nyc": "^15.0.0",
-    "rimraf": "^3.0.0"
+    "mocha": "^8.0.1",
+    "nyc": "^15.1.0",
+    "rimraf": "^3.0.2"
   },
   "nyc": {
     "sourceMap": false,
