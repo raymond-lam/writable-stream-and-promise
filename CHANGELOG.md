@@ -1,5 +1,12 @@
 # Changelog
 
+## [1.0.11] - 2020-07-05
+
+### Fixed
+
+- Fixed bug where .end() was rejecting the Promise
+- Updated dev dependencies
+
 ## [1.0.10] - 2020-04-05
 
 ### Fixed
