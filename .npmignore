@@ -1,5 +1,6 @@
 *.swp
 .eslintrc.yml
 .gitignore
+.github
 coverage
 test.js

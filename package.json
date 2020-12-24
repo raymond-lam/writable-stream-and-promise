@@ -10,7 +10,10 @@
   "main": "index.js",
   "scripts": {
     "clean": "rimraf coverage",
-    "test": "eslint --ignore-path=.gitignore . && nyc --reporter=lcov --reporter=text mocha test.js"
+    "test": "npm run test:lint && npm run test:unit",
+    "test:unit": "mocha test.js",
+    "test:coverage": "nyc --reporter=lcov --reporter=text mocha test.js",
+    "test:lint": "eslint --ignore-path=.gitignore"
   },
   "repository": {
     "type": "git",
@@ -24,7 +27,6 @@
   "homepage": "https://github.com/raymond-lam/writable-stream-and-promise#readme",
   "devDependencies": {
     "chai": "^4.2.0",
-    "coveralls": "^3.1.0",
     "eslint": "^7.4.0",
     "greenkeeper-lockfile": "^1.15.1",
     "mocha": "^8.0.1",

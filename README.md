@@ -1,7 +1,7 @@
 writable-stream-and-promise
 ===========================
 
-[![Build Status](https://travis-ci.com/raymond-lam/writable-stream-and-promise.svg?branch=master)](https://travis-ci.com/raymond-lam/writable-stream-and-promise) 
+[![CI](https://github.com/raymond-lam/writable-stream-and-promise/workflows/CI/badge.svg?branch=master)](https://github.com/raymond-lam/writable-stream-and-promise/actions)
 [![Coverage Status](https://coveralls.io/repos/github/raymond-lam/writable-stream-and-promise/badge.svg?branch=master)](https://coveralls.io/github/raymond-lam/writable-stream-and-promise?branch=master)
 [![Greenkeeper badge](https://badges.greenkeeper.io/raymond-lam/writable-stream-and-promise.svg)](https://greenkeeper.io/)
 [![MIT license](http://img.shields.io/badge/license-MIT-brightgreen.svg)](http://opensource.org/licenses/MIT)
