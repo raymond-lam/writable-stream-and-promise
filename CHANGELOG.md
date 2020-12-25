@@ -1,5 +1,16 @@
 # Changelog
 
+## [1.0.15] - 2020-12-25
+
+### Added
+
+- Dependabot configuration
+
+### Changed
+
+- Removed all tag triggers in CI workflow (assuming that the case is covered by release publication trigger)
+- Dev dependency updates
+
 ## [1.0.14] - 2020-12-25
 
 ### Fixed
