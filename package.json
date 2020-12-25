@@ -28,7 +28,6 @@
   "devDependencies": {
     "chai": "^4.2.0",
     "eslint": "^7.4.0",
-    "greenkeeper-lockfile": "^1.15.1",
     "mocha": "^8.2.1",
     "nyc": "^15.1.0",
     "rimraf": "^3.0.2"
