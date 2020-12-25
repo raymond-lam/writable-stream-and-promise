@@ -2,6 +2,7 @@ name: CI
 on:
   push:
     branches:
+      - '*'
     tags-ignore:
       - v* # "v" tags indicate a release, which is already covered
   pull_request:
