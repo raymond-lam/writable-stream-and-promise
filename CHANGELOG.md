@@ -1,5 +1,16 @@
 # Changelog
 
+## [1.0.13] - 2020-12-25
+
+### Fixed
+
+- Updated dev dependency to address security vulnerability
+
+### Changed
+
+- Use GitHub Actions instead of Travis-CI for CI/CD
+- Remove references to Greenkeeper.io
+
 ## [1.0.12] - 2020-07-18
 
 ### Fixed
