@@ -1,5 +1,15 @@
 # Changelog
 
+## [1.0.14] - 2020-12-25
+
+### Fixed
+
+- Removed duplicative tag trigger in CI workflow
+
+### Changed
+
+- Removed dev dependency on greenkeeper-lockfile
+
 ## [1.0.13] - 2020-12-25
 
 ### Fixed
