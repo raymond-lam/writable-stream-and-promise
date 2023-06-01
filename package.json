@@ -30,7 +30,7 @@
     "eslint": "^8.1.0",
     "mocha": "^10.2.0",
     "nyc": "^15.1.0",
-    "rimraf": "^4.1.2"
+    "rimraf": "^5.0.1"
   },
   "nyc": {
     "sourceMap": false,
